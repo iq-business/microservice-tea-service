@@ -1,6 +1,6 @@
 namespace TeaDal
 {
-    public class Tea: ITea
+    public class Tea : ITea
     {
         #region Public Properties
 

@@ -8,8 +8,9 @@ namespace Tea.Test
         [Fact]
         public void TeaPriceShouldBe()
         {
-            ITea tea = new DalTea().GetTea(21.95M);
-            var expectedPrice = 21.95M;
+            var tea = new DalTea().GetTea();
+            const decimal expectedPrice = 22.65M;
+            Assert.IsType<TeaDal.Tea>(tea);
             Assert.Equal(expectedPrice, tea.Price);
         }
     }

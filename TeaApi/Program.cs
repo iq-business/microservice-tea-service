@@ -86,8 +86,11 @@ namespace TeaApi
                 .Configure(app =>
                 {
                     // define all API endpoints
-                    var tprice = new DalTea().GetTea(31.95M);
-                    app.UseRouter(r => { r.MapGet("tea", context => context.Response.WriteJson(tprice)); });
+                    var tprice = new DalTea().GetTea();
+                    app.UseRouter(r =>
+                    {
+                        r.MapGet("tea", context => context.Response.WriteJson(tprice));
+                    });
                 })
                 .Build();
 
