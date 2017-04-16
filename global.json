@@ -1,7 +1,7 @@
 {
-  "projects": [
-    "TeaApi",
-    "TeaDal"
-  ]
-  
+    "projects": [
+        "Tea.Api",
+        "Tea.Dal"
+    ]
+
 }
