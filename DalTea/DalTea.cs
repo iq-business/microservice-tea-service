@@ -4,7 +4,7 @@
     {
         public ITea GetTea()
         {
-            return new EarlGrey() { Price = 23.65M, Name="Earl Grey", Description="A tea blend which has been flavoured with the addition of oil of bergamot." };
+            return new EarlGrey() { Price = 18.50M, Name="Tea", Description="Naboo Green Tea" };
             }
     }
 }
