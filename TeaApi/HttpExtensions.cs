@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace TeaApi
 {
@@ -21,7 +22,9 @@ namespace TeaApi
         public static Task WriteJson<T>(this HttpResponse response, T obj)
         {
             response.ContentType = "application/json";
-            return response.WriteAsync(JsonConvert.SerializeObject(obj));
+            var js = new JsonSerializerSettings();
+            js.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            return response.WriteAsync(JsonConvert.SerializeObject(obj, js));
         }
         #endregion
     }
