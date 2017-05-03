@@ -6,7 +6,7 @@ namespace Tea.Dal
     {
         public ITea GetTea()
         {
-            ITea tea = new EarlGrey() { Price = GetRandomPrice(), Name="Tea", Description="Naboo Red Tea" };
+            ITea tea = new EarlGrey() { Price = GetRandomPrice(), Name="Tea", Description="Naboo Green Tea" };
             LogToConsole(tea);
             return tea;
         }
