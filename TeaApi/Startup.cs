@@ -18,7 +18,6 @@ namespace TeaApi
         {
             loggerFactory.AddConsole();
 
-            var tea = new Tea.Dal.DalTea().GetTea();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -26,7 +25,7 @@ namespace TeaApi
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteJson(tea);
+                await context.Response.WriteJson(new Tea.Dal.DalTea().GetTea());
             });
         }
     }

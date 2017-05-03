@@ -15,7 +15,7 @@ namespace TeaApi
                 .Build();
 
             var host = new WebHostBuilder()
-                .UseUrls("http://localhost:5050")
+                .UseUrls("http://localhost:9191")
                 .UseKestrel()
                 .UseConfiguration(config)
                 .UseContentRoot(Directory.GetCurrentDirectory())

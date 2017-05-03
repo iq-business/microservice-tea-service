@@ -291,4 +291,7 @@ __pycache__/
 *.odx.cs
 *.xsd.cs
 
+# Visual Studio Code
+.vscode/
+
 # End of https://www.gitignore.io/api/visualstudio
